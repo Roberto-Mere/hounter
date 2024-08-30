@@ -1,0 +1,93 @@
+.btn {
+  padding: 1.2rem 2.4rem;
+  border: 1px solid currentColor;
+  border-radius: 10rem;
+  font-size: 1.4rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  // Modifiers
+
+  &--light {
+    color: $color-primary-dark;
+    background-color: $color-primary-light;
+  }
+
+  &--small {
+    padding: 0.8rem 1.6rem;
+    line-height: 1.6rem;
+    color: $color-white;
+    background-color: rgba($color-white, 0.1);
+  }
+
+  // Select
+
+  &--select {
+    position: relative;
+    cursor: pointer;
+    border-bottom: 1px solid currentColor;
+
+    & .btn__option-input {
+      appearance: none;
+    }
+
+    & .btn__icon {
+      margin-left: 0.8rem;
+      transition: all 0.25s ease-out;
+    }
+
+    &:focus,
+    &:hover {
+      & .btn__options {
+        transform: scaleY(1);
+      }
+
+      & .btn__icon {
+        transform: rotateZ(180deg);
+      }
+    }
+  }
+
+  &__options {
+    width: calc(100% + 2px);
+    position: absolute;
+    top: 50%;
+    left: -1px;
+    transform: scaleY(0);
+    padding-top: 20%;
+    border: 1px solid currentColor;
+    border-top: none;
+    border-bottom-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+    transform-origin: top;
+    transition: all 0.25s ease-in-out;
+  }
+
+  &__option {
+    width: 100%;
+    display: flex;
+    padding: 0.8rem;
+    cursor: pointer;
+
+    &-main {
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      flex: 0 0 100%;
+      text-align: start;
+      padding: 0.4rem 0.8rem;
+      border-radius: 2.8rem;
+    }
+
+    &:hover &-text {
+      background-color: rgba($color-primary, 0.5);
+    }
+
+    &-input:checked + &-text {
+      background-color: $color-primary;
+    }
+  }
+}

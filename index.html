@@ -3,13 +3,66 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="dist/css/style.css" />
+    <link rel="stylesheet" href="src/css/style.css" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script type="module" src="/src/js/index.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/index.js"></script>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="link-img nav__logo-link"
+          ><img
+            src="src/assets/svg/logo.svg"
+            alt="Hounter logo"
+            class="nav__logo"
+          />
+        </a>
+        <ul class="list nav__list">
+          <li class="nav__list-item">
+            <button class="btn btn--small">About Us</button>
+          </li>
+          <li class="nav__list-item">
+            <button class="btn btn--small">Article</button>
+          </li>
+          <li>
+            <button class="btn btn--small btn--select">
+              <div class="btn__option-main">
+                <span class="btn__option-main-text">Property</span>
+                <img
+                  src="src/assets/svg/arrow-down.svg"
+                  alt=""
+                  class="btn__icon"
+                />
+              </div>
+              <div class="btn__options">
+                <label class="btn__option">
+                  <input
+                    type="radio"
+                    name="property"
+                    value="feature"
+                    class="btn__option-input"
+                  />
+                  <span class="btn__option-text">Feature</span>
+                </label>
+                <label class="btn__option">
+                  <input
+                    type="radio"
+                    name="property"
+                    value="tour"
+                    class="btn__option-input"
+                  />
+                  <span class="btn__option-text">Tour</span>
+                </label>
+              </div>
+            </button>
+          </li>
+          <li class="nav__list-item">
+            <button class="btn btn--light">Sign Up</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>

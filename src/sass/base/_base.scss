@@ -1,0 +1,25 @@
+// General reset
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 62.5%; //1 rem = 10px
+}
+
+// Links
+
+.link-img {
+  line-height: 0;
+}
+
+// Lists
+
+.list {
+  list-style: none;
+}
