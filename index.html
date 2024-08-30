@@ -7,9 +7,42 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <script type="module" src="/src/js/index.js"></script>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/js/index.js"></script>
+    <header class="header">
+      <nav class="nav">
+        <a href="#" class="link-img nav__logo-link"
+          ><img
+            src="src/assets/svg/logo.svg"
+            alt="Hounter logo"
+            class="nav__logo"
+          />
+        </a>
+        <ul class="list nav__list">
+          <li class="nav__list-item">
+            <button class="btn btn--small">About Us</button>
+          </li>
+          <li class="nav__list-item">
+            <button class="btn btn-small">Article</button>
+          </li>
+          <li class="nav__list-item">
+            <button class="btn btn--small btn--select">
+              <span class="btn__option-default">Property</span>
+              <span class="btn__option">Feature</span>
+              <span class="btn__option">Tour</span>
+              <img
+                src="src/assets/svg/arrow-down.svg"
+                alt=""
+                class="btn__icon"
+              />
+            </button>
+          </li>
+          <li class="nav__list-item">
+            <button class="btn">Sign Up</button>
+          </li>
+        </ul>
+      </nav>
+    </header>
   </body>
 </html>
