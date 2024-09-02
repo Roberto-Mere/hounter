@@ -15,7 +15,7 @@
   </head>
   <body>
     <header class="header">
-      <nav class="nav">
+      <nav class="nav header__nav">
         <a href="#" class="link-img nav__logo-link"
           ><img
             src="src/assets/svg/logo.svg"
@@ -69,14 +69,16 @@
       </nav>
 
       <div class="header__content">
-        <h1 class="heading-primary">
-          Find the place to live
-          <span class="text-primary">your dreams</span> easily here
-        </h1>
-        <p class="body-light text-grey-3">
-          Everything you need about finding your place to live will be here,
-          where it will be easier for you
-        </p>
+        <div class="header__title">
+          <h1 class="heading-primary">
+            Find the place to live
+            <span class="text-primary">your dreams</span> easily here
+          </h1>
+          <p class="body-light text-grey-3">
+            Everything you need about finding your place to live will be here,
+            where it will be easier for you
+          </p>
+        </div>
 
         <label class="input input--complex">
           <img src="src/assets/svg/location.svg" alt="" />
@@ -100,7 +102,9 @@
         </div>
       </div>
 
-      <img src="src/assets/img/hero-img.png" alt="House for sale" />
+      <figure class="header__hero-image">
+        <img src="src/assets/img/hero-img.png" alt="House for sale" />
+      </figure>
     </header>
   </body>
 </html>
