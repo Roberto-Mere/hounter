@@ -26,11 +26,38 @@
     background-color: rgba($color-white, 0.1);
   }
 
-  &--icon {
+  &--iconed {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    gap: 3.2rem;
+    gap: 1.2rem;
+  }
+
+  &--filter {
+    color: $color-primary-dark;
+    background-color: $color-white;
+
+    &-selected {
+      color: $color-primary;
+      background-color: $color-primary-light;
+      border: 1px solid $color-primary-light;
+    }
+  }
+
+  &--arrow {
+    padding: 1.2rem;
+    color: $color-primary;
+    background-color: $color-white;
+
+    & .btn__icon {
+      display: block;
+    }
+
+    &:active {
+      color: $color-white;
+      background-color: $color-primary;
+      border: 1px solid $color-primary;
+    }
   }
 
   // Select
