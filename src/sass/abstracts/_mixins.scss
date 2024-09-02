@@ -10,3 +10,17 @@
     border: 0.5px solid currentColor;
   }
 }
+
+@mixin topTail {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: -0.8rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.2rem;
+    border: 0.5px solid currentColor;
+  }
+}
