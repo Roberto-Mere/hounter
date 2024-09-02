@@ -1,7 +1,12 @@
 @import 'abstracts/variables';
 
 @import 'base/base';
+@import 'base/typography';
 
 @import 'components/btn';
+@import 'components/input';
+@import 'components/partners';
 
 @import 'layout/nav';
+
+@import 'pages/home';

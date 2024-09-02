@@ -14,11 +14,23 @@
     background-color: $color-primary-light;
   }
 
+  &--primary {
+    color: $color-white;
+    background-color: $color-primary;
+  }
+
   &--small {
     padding: 0.8rem 1.6rem;
     line-height: 1.6rem;
     color: $color-white;
     background-color: rgba($color-white, 0.1);
+  }
+
+  &--icon {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: 3.2rem;
   }
 
   // Select
