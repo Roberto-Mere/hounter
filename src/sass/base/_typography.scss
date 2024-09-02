@@ -21,12 +21,29 @@ body {
   text-transform: capitalize;
 }
 
+// Subtitle
+
+.subtitle {
+  font-size: 1.8rem;
+  font-weight: 500;
+}
+
 // Body
 
 .body-light {
   font-size: 1.6rem;
   font-weight: 300;
   line-height: 2.4rem;
+}
+
+.body-medium {
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+
+.body-semibold {
+  font-size: 1.6rem;
+  font-weight: 600;
 }
 
 // Label
