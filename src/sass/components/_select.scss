@@ -33,6 +33,12 @@
       border-top: none;
     }
 
+    & .select__icon {
+      height: 1.6rem;
+      width: 1.6rem;
+      margin-left: 0.8rem;
+    }
+
     // Hover and select option
 
     & .select__option {
@@ -126,7 +132,9 @@
   }
 
   &__icon {
-    margin-left: 0.8rem;
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-left: auto;
     transition: all 0.25s ease-out;
   }
 
