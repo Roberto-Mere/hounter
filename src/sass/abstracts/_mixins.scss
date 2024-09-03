@@ -24,3 +24,33 @@
     border: 0.5px solid currentColor;
   }
 }
+
+@mixin blob(
+  $blob-1-top,
+  $blob-1-left,
+  $blob-1-colour,
+  $blob-2-top,
+  $blob-2-left,
+  $blob-2-colour
+) {
+  position: relative;
+
+  &-blob {
+    position: absolute;
+    z-index: -1;
+    filter: blur(4rem);
+    opacity: 0.3;
+
+    &-1 {
+      top: $blob-1-top;
+      left: $blob-1-left;
+      color: $blob-1-colour;
+    }
+
+    &-2 {
+      top: $blob-2-top;
+      left: $blob-2-left;
+      color: $blob-2-colour;
+    }
+  }
+}
