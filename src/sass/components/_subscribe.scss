@@ -1,0 +1,88 @@
+.subscribe {
+  display: grid;
+  grid-template-columns: 30% 1fr 30%;
+  background-image: linear-gradient(
+    135deg,
+    $color-violet 20%,
+    $color-white 50%,
+    $color-white 70%,
+    $color-violet 100%
+  );
+  border-radius: 3.6rem;
+  margin: 12.4rem;
+  margin-top: 0;
+
+  &__heading {
+    text-align: center;
+  }
+
+  &__left,
+  &__right {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(10, 2.4rem);
+    justify-items: center;
+    padding: 4rem;
+  }
+
+  &__center {
+    display: grid;
+    align-content: center;
+    gap: 4rem;
+  }
+
+  &__image {
+    border: 2px solid $color-white;
+    border-radius: 2.4rem;
+
+    &--large {
+      width: 7.2rem;
+      height: 7.2rem;
+    }
+
+    &--small {
+      width: 5.4rem;
+      height: 5.4rem;
+    }
+
+    &--avatar {
+      width: 3.6rem;
+      height: 3.6rem;
+    }
+
+    &-2 {
+      grid-column: 3 / 4;
+      grid-row: 2 / 3;
+    }
+
+    &-3 {
+      grid-column: 1 / 2;
+      grid-row: 7 / 8;
+    }
+
+    &-4 {
+      grid-column: 3 / 4;
+      grid-row: 7 / 8;
+    }
+
+    &-5 {
+      grid-column: 2 / 3;
+    }
+
+    &-6 {
+      grid-column: 4 / 5;
+      grid-row: 3 / 4;
+    }
+
+    &-7 {
+      justify-self: end;
+      grid-column: 2 / 3;
+      grid-row: 5 / 6;
+    }
+
+    &-8 {
+      grid-column: 4 / 5;
+      grid-row: 7 / 8;
+    }
+  }
+}
