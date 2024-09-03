@@ -121,22 +121,6 @@
     border: 1px solid $color-grey-1;
     margin: 3.2rem 0;
   }
-
-  &__contact {
-    display: flex;
-    align-items: center;
-
-    &-avatar {
-      height: 5.4rem;
-      width: auto;
-      border-radius: 50%;
-    }
-
-    &-details {
-      margin-left: 1.6rem;
-      margin-right: auto;
-    }
-  }
 }
 
 .reviews {
