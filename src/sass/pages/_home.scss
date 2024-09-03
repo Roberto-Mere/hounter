@@ -59,7 +59,7 @@
 }
 
 .features {
-  padding: 12.4rem;
+  margin: 12.4rem;
 
   &__label {
     margin-bottom: 1.2rem;
@@ -88,8 +88,8 @@
   display: grid;
   grid-template-columns: repeat(2, 37vw);
   justify-content: space-between;
-  padding: 12.4rem;
-  padding-top: 0;
+  margin: 12.4rem;
+  margin-top: 0;
 
   &__label {
     margin-bottom: 1.2rem;
