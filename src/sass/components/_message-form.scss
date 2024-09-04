@@ -1,0 +1,30 @@
+.message-form {
+  display: grid;
+  gap: 2.8rem;
+  padding: 4rem;
+  border-radius: 0.8rem;
+  box-shadow: $shadow;
+
+  &__item {
+    display: flex;
+    align-items: start;
+    gap: 1.2rem;
+
+    &-name {
+      margin-top: 1.6rem;
+      margin-right: auto;
+    }
+
+    &-input {
+      flex: 0 1 80%;
+    }
+
+    &:last-child {
+      display: grid;
+      grid-template-columns: 2.4rem 1fr;
+      justify-self: end;
+      width: 80%;
+      gap: 0.8rem;
+    }
+  }
+}

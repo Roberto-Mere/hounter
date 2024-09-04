@@ -1,0 +1,157 @@
+.select {
+  position: relative;
+  font-family: inherit;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+
+  &__option-main {
+    position: relative;
+    z-index: 2;
+    border-radius: inherit;
+    padding: 1.2rem 2.4rem;
+  }
+
+  // Modifiers
+
+  &--small {
+    font-weight: 600;
+    line-height: 1.6rem;
+    color: $color-white;
+    background-color: rgba($color-white, 0.1);
+
+    & .select__option-main {
+      padding: 0.8rem 1.6rem;
+      border: 1px solid $color-white;
+    }
+
+    & .select__options {
+      border: 1px solid $color-grey-1;
+      border-top: none;
+      padding-top: 2rem;
+    }
+
+    & .select__icon {
+      height: 1.6rem;
+      width: 1.6rem;
+      margin-left: 0.8rem;
+    }
+
+    // Hover and select option
+
+    & .select__option {
+      &:hover .select__option-text {
+        background-color: rgba($color-primary, 0.7);
+      }
+
+      &-input:checked + .select__option-text {
+        background-color: $color-primary;
+      }
+    }
+  }
+
+  &--grey {
+    color: $color-grey-2;
+    background-color: $color-white;
+
+    & .select__option-main {
+      border: 1px solid $color-grey-1;
+    }
+
+    & .select__options {
+      color: $color-black;
+      border: 1px solid $color-grey-1;
+      border-top: none;
+      padding-top: 2.4rem;
+    }
+
+    // Hover and select option
+
+    & .select__option {
+      background-color: $color-white;
+
+      &:hover .select__option-text {
+        background-color: rgba($color-primary-light, 0.5);
+      }
+
+      &-input:checked + .select__option-text {
+        background-color: $color-primary-light;
+      }
+    }
+
+    &:focus {
+      & .select__option-main {
+        outline: 1px solid blue;
+      }
+    }
+  }
+
+  // Base elements
+
+  &__options {
+    width: 100%;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+    left: 0px;
+    transform-origin: top;
+    transform: scaleY(0);
+    transition: all 0.25s ease-in-out;
+    border-bottom-left-radius: 1.6rem;
+    border-bottom-right-radius: 1.6rem;
+  }
+
+  &__option {
+    width: 100%;
+    display: flex;
+    padding: 0.8rem;
+    cursor: pointer;
+
+    &-main {
+      display: flex;
+      align-items: center;
+    }
+
+    &-text {
+      flex: 0 0 100%;
+      text-align: start;
+      padding: 0.4rem 0.8rem;
+      border-radius: 2.8rem;
+    }
+
+    &-input {
+      appearance: none;
+    }
+
+    &-input:focus + .select__option-text {
+      outline: 1px solid blue;
+    }
+
+    &:last-child {
+      border-bottom-left-radius: 1.6rem;
+      border-bottom-right-radius: 1.6rem;
+    }
+  }
+
+  &__icon {
+    height: 2.4rem;
+    width: 2.4rem;
+    margin-left: auto;
+    transition: all 0.25s ease-out;
+  }
+
+  // Functionality
+
+  &:focus-within {
+    & .select__options {
+      transform: scaleY(1);
+    }
+
+    & .select__icon {
+      transform: rotateZ(180deg);
+    }
+  }
+}
