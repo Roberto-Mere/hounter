@@ -2,6 +2,7 @@
   &__images {
     margin-top: 0.8rem;
     display: flex;
+    flex-wrap: wrap;
     gap: 3.2rem;
   }
 }
