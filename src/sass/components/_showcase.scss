@@ -1,8 +1,14 @@
 .showcase {
   display: grid;
-  grid-template-columns: 7% repeat(3, max-content) 2%;
-  grid-template-rows: 60% repeat(2, max-content) 7%;
+  grid-template-columns: 7% 45% repeat(2, 1fr) 3%;
+  grid-template-rows: 63% 1fr 8% 9%;
   column-gap: 1.2rem;
+
+  & > * {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
 
   & > :not(:first-child) {
     border-radius: 1.2rem;
