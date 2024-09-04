@@ -37,8 +37,7 @@
 
   &-blob {
     position: absolute;
-    z-index: -1;
-    filter: blur(4rem);
+    filter: blur(4.5rem);
     opacity: 0.3;
 
     &-1 {
