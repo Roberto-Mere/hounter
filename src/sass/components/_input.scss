@@ -2,6 +2,8 @@
   padding: 1.6rem 2.4rem;
   border: 1px solid $color-grey-1;
   border-radius: 2.8rem;
+  font-family: inherit;
+  color: inherit;
   background-color: $color-white;
 
   &--complex {
@@ -13,15 +15,40 @@
       flex: 1;
       border: none;
       outline: none;
+      color: inherit;
 
       &::placeholder {
-        color: inherit;
+        color: $color-grey-2;
       }
     }
   }
 
+  &--textarea {
+    display: flex;
+    align-items: end;
+
+    &-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-family: inherit;
+      color: inherit;
+      resize: none;
+
+      &::placeholder {
+        color: $color-grey-2;
+      }
+    }
+  }
+
+  &--checkbox {
+    width: 2.4rem;
+    height: 2.4rem;
+    accent-color: $color-primary;
+  }
+
   &::placeholder {
-    color: inherit;
+    color: $color-grey-2;
   }
 
   &:focus-within {
