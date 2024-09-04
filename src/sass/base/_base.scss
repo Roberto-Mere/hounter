@@ -18,6 +18,14 @@
   line-height: 0;
 }
 
+.link {
+  &:link,
+  &:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
 // Lists
 
 .list {
