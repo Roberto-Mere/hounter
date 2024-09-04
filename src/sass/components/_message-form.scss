@@ -16,14 +16,14 @@
     }
 
     &-input {
-      flex: 0 1 80%;
+      flex: 0 1 75%;
     }
 
     &:last-child {
       display: grid;
       grid-template-columns: 2.4rem 1fr;
       justify-self: end;
-      width: 80%;
+      width: 75%;
       gap: 0.8rem;
     }
   }
