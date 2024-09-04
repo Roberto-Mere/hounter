@@ -416,26 +416,26 @@
         </div>
         <form class="message-form">
           <label class="message-form__item">
-            <span class="text-input">Name</span>
+            <span class="text-input message-form__item-name">Name</span>
             <input
               type="text"
-              class="input text-input"
+              class="input text-input message-form__item-input"
               placeholder="Your Name"
             />
           </label>
 
           <label class="message-form__item">
-            <span class="text-input">Surname</span>
+            <span class="text-input message-form__item-name">Surname</span>
             <input
               type="text"
-              class="input text-input"
+              class="input text-input message-form__item-input"
               placeholder="Your Surname"
             />
           </label>
 
           <label class="message-form__item">
-            <span class="text-input">Education</span>
-            <button class="select select--grey">
+            <span class="text-input message-form__item-name">Education</span>
+            <button class="select select--grey message-form__item-input">
               <div class="select__option-main">
                 <span class="select__option-main-text">Select one</span>
                 <svg
@@ -494,21 +494,27 @@
           </label>
 
           <label class="message-form__item">
-            <span class="text-input">Surname</span>
-            <textarea
-              class="input input--textarea text-input"
-              placeholder="Message"
-            ></textarea>
+            <span class="text-input message-form__item-name">Message</span>
+            <div class="input input--textarea message-form__item-input">
+              <textarea
+                class="input--textarea-input text-input"
+                placeholder="Message"
+                rows="6"
+              ></textarea>
+              <span class="label-small text-grey-2 input--textarea-count">
+                0/500
+              </span>
+            </div>
           </label>
 
-          <label class="message-form__item">
+          <div class="message-form__item">
             <input type="checkbox" class="input input--checkbox" />
             <span class="label-regular text-grey-3"
               >I give consent to the processing of my personal data given in the
               contact form above under the terms and conditions of Grid Dynamics
               Privacy Policy.</span
             >
-          </label>
+          </div>
         </form>
       </section>
     </main>
