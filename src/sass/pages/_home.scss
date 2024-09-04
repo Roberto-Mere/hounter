@@ -1,6 +1,6 @@
 .header {
   display: grid;
-  grid-template-columns: 12.4rem min-content minmax(3.2rem, 1fr) 50%;
+  grid-template-columns: 12.4rem minmax(min-content, 33%) minmax(3.2rem, 1fr) 50%;
   grid-template-rows: max-content 1fr;
 
   &__nav {

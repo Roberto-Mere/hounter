@@ -1,0 +1,44 @@
+.footer {
+  display: flex;
+  justify-content: space-between;
+  margin: 12.4rem;
+  margin-top: 0;
+
+  &__bio {
+    flex: 0 1 30%;
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+  }
+
+  &__details {
+    flex: 0 1 60%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &__column {
+    &-title {
+      margin-bottom: 2.4rem;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+  }
+
+  &__link {
+    &:link,
+    &:visited {
+      transition: all 0.2s ease;
+
+      &:focus,
+      &:hover {
+        outline: none;
+        border-bottom: 2px solid currentColor;
+      }
+    }
+  }
+}
