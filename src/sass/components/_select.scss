@@ -31,6 +31,7 @@
     & .select__options {
       border: 1px solid $color-grey-1;
       border-top: none;
+      padding-top: 2rem;
     }
 
     & .select__icon {
@@ -64,6 +65,7 @@
       color: $color-black;
       border: 1px solid $color-grey-1;
       border-top: none;
+      padding-top: 2.4rem;
     }
 
     // Hover and select option
@@ -98,7 +100,6 @@
     transform-origin: top;
     transform: scaleY(0);
     transition: all 0.25s ease-in-out;
-    padding-top: 20%;
     border-bottom-left-radius: 1.6rem;
     border-bottom-right-radius: 1.6rem;
   }
@@ -121,14 +122,18 @@
       border-radius: 2.8rem;
     }
 
+    &-input {
+      appearance: none;
+    }
+
+    &-input:focus + .select__option-text {
+      outline: 1px solid blue;
+    }
+
     &:last-child {
       border-bottom-left-radius: 1.6rem;
       border-bottom-right-radius: 1.6rem;
     }
-  }
-
-  &__option-input {
-    appearance: none;
   }
 
   &__icon {
@@ -140,7 +145,7 @@
 
   // Functionality
 
-  &:focus {
+  &:focus-within {
     & .select__options {
       transform: scaleY(1);
     }
