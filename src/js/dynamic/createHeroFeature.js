@@ -1,4 +1,4 @@
-function createHeroFeature(title, label, ...images) {
+function createHeroFeature({ title, label, images }) {
   // Create elements
 
   const featureContainer = document.createElement('div');
