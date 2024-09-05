@@ -28,6 +28,14 @@
     &-popular {
       background-color: $color-danger-light;
     }
+
+    &-new {
+      background-color: $color-info-light;
+    }
+
+    &-deals {
+      background-color: $color-primary-light;
+    }
   }
 
   &__text {
