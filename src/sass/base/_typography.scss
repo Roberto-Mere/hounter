@@ -27,6 +27,12 @@ body {
   text-transform: capitalize;
 }
 
+.heading-th {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 // Subtitle
 
 .subtitle {
@@ -59,6 +65,11 @@ body {
   line-height: 2.4rem;
 }
 
+.label-medium {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+
 .label-small {
   font-size: 1.2rem;
 }
@@ -76,6 +87,10 @@ body {
   color: $color-primary;
 }
 
+.text-primary-dark {
+  color: $color-primary-dark;
+}
+
 .text-secondary {
   color: $color-secondary;
 }
@@ -90,4 +105,12 @@ body {
 
 .text-dark-black {
   color: $color-dark-black;
+}
+
+.text-danger {
+  color: $color-danger;
+}
+
+.text-info {
+  color: $color-info;
 }

@@ -70,6 +70,7 @@
 
 .features {
   margin: 12.4rem;
+  overflow: hidden;
 
   &__label {
     margin-bottom: 1.2rem;
@@ -91,6 +92,12 @@
   &__arrows {
     display: flex;
     gap: 1.6rem;
+  }
+
+  &__house-features {
+    width: max-content;
+    display: flex;
+    gap: 3.2rem;
   }
 }
 

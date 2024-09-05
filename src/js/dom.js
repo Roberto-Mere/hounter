@@ -1,7 +1,8 @@
 import createHeroFeature from './dynamic/createHeroFeature';
+import createHouseFeature from './dynamic/createHouseFeature';
 
 export function createHeroFeatures(features) {
-  const heroImage = document.querySelector('.header__hero-image');
+  const parentContainer = document.querySelector('.header__hero-image');
   const heroFeatures = document.createElement('div');
 
   heroFeatures.className = 'header__hero-features';
@@ -10,5 +11,18 @@ export function createHeroFeatures(features) {
     heroFeatures.append(createHeroFeature(feat));
   });
 
-  heroImage.append(heroFeatures);
+  parentContainer.append(heroFeatures);
+}
+
+export function createHouseFeatures(features) {
+  const parentContainer = document.querySelector('.features');
+  const houseFeatures = document.createElement('div');
+
+  houseFeatures.className = 'features__house-features';
+
+  features.forEach((feat) => {
+    houseFeatures.append(createHouseFeature(feat));
+  });
+
+  parentContainer.append(houseFeatures);
 }

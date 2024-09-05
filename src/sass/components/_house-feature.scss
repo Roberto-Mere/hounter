@@ -1,0 +1,62 @@
+.house-feature {
+  display: grid;
+  grid-template-rows: 27vh repeat(3, max-content);
+  gap: 2.4rem;
+
+  &__image {
+    height: 100%;
+    width: auto;
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    object-fit: cover;
+    border-radius: 2.4rem;
+  }
+
+  &__label {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    justify-self: start;
+    align-self: end;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    padding: 0.8rem 1.6rem;
+    border-radius: 3.2rem;
+    margin: 1.6rem;
+
+    &-popular {
+      background-color: $color-danger-light;
+    }
+
+    &-new {
+      background-color: $color-info-light;
+    }
+
+    &-deals {
+      background-color: $color-primary-light;
+    }
+  }
+
+  &__text {
+    & :not(:last-child) {
+      margin-bottom: 0.8rem;
+    }
+  }
+
+  &__partner {
+    display: flex;
+    gap: 1.6rem;
+
+    &-text {
+      & :not(:last-child) {
+        margin-bottom: 0.4rem;
+      }
+    }
+
+    &-image {
+      height: 4rem;
+      width: 4rem;
+      border-radius: 50%;
+    }
+  }
+}
