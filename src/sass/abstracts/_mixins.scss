@@ -31,12 +31,17 @@
   $blob-1-colour,
   $blob-2-top,
   $blob-2-left,
-  $blob-2-colour
+  $blob-2-colour,
+  $blob-width: 53rem
 ) {
   position: relative;
 
+  &__blob,
   &-blob {
+    width: $blob-width;
+    height: auto;
     position: absolute;
+    z-index: -1;
     filter: blur(4.5rem);
     opacity: 0.3;
 

@@ -1,8 +1,10 @@
 .footer {
   display: flex;
   justify-content: space-between;
-  margin: 12.4rem;
-  margin-top: 0;
+  padding: 12.4rem;
+  padding-top: 8.4rem;
+  overflow: hidden;
+  @include blob(8%, 81%, #82bbff, 20%, 62%, #b9ff82);
 
   &__bio {
     flex: 0 1 30%;
