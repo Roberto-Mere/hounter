@@ -92,6 +92,12 @@
     display: flex;
     gap: 1.6rem;
   }
+
+  &__house-features {
+    width: max-content;
+    display: flex;
+    gap: 3.2rem;
+  }
 }
 
 .tour {
