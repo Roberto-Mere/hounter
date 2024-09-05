@@ -27,6 +27,12 @@ body {
   text-transform: capitalize;
 }
 
+.heading-th {
+  font-size: 2rem;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
 // Subtitle
 
 .subtitle {
@@ -57,6 +63,11 @@ body {
 .label-regular {
   font-size: 1.4rem;
   line-height: 2.4rem;
+}
+
+.label-medium {
+  font-size: 1.4rem;
+  font-weight: 500;
 }
 
 .label-small {
@@ -90,4 +101,12 @@ body {
 
 .text-dark-black {
   color: $color-dark-black;
+}
+
+.text-danger {
+  color: $color-danger;
+}
+
+.text-info {
+  color: $color-info;
 }
