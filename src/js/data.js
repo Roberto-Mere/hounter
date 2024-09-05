@@ -20,4 +20,50 @@ export const data = {
       images: ['src/assets/img/avatar-ashley.png'],
     },
   ],
+  houseFeatures: [
+    {
+      image: 'src/assets/img/features-1.png',
+      label: 'Popular',
+      title: 'Roselands House',
+      price: 35000000,
+      partner: {
+        image: 'src/assets/img/avatar-dianne.png',
+        name: 'Dianne Russell',
+        location: 'Manchester, Kentucky',
+      },
+    },
+    {
+      image: 'src/assets/img/features-2.png',
+      label: 'New house',
+      title: 'Woodlandside',
+      price: 20000000,
+      partner: {
+        image: 'src/assets/img/avatar-robert.png',
+        name: 'Robert Fox',
+        location: 'Dr. San Jose, South Dakota',
+      },
+    },
+    {
+      image: 'src/assets/img/features-3.png',
+      label: 'Best deals',
+      title: 'Lighthouse',
+      price: 44000000,
+      partner: {
+        image: 'src/assets/img/avatar-ronald.png',
+        name: 'Ronald Richards',
+        location: 'Santa Ana, Illinois',
+      },
+    },
+    {
+      image: 'src/assets/img/features-1.png',
+      label: 'Popular',
+      title: "Cosmo's House",
+      price: 22000000,
+      partner: {
+        image: 'src/assets/img/avatar-jenny.png',
+        name: 'Jenny Wilson',
+        location: 'Preston Rd. Inglewood, Maine 98380',
+      },
+    },
+  ],
 };
