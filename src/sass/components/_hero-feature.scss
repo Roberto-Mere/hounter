@@ -1,0 +1,20 @@
+.hero-feature {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  padding: 2.4rem;
+  border-radius: 3.2rem;
+  background-color: $color-white;
+
+  &__image {
+    height: 5.4rem;
+    width: 5.4rem;
+    object-fit: cover;
+    border: 3px solid $color-white;
+    border-radius: 50%;
+
+    &:not(:first-child) {
+      margin-left: -2.7rem;
+    }
+  }
+}
