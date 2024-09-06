@@ -1,5 +1,6 @@
 import createHeroFeature from './dynamic/createHeroFeature';
 import createHouseFeature from './dynamic/createHouseFeature';
+import createReview from './dynamic/createReview';
 
 export function createHeroFeatures(features) {
   const parentContainer = document.querySelector('.header__hero-image');
@@ -25,4 +26,17 @@ export function createHouseFeatures(features) {
   });
 
   parentContainer.append(houseFeatures);
+}
+
+export function createReviews(reviews) {
+  const parentContainer = document.querySelector('.reviews');
+  const houseReviews = document.createElement('div');
+
+  houseReviews.className = 'reviews__house-reviews';
+
+  reviews.forEach((rev) => {
+    houseReviews.append(createReview(rev));
+  });
+
+  parentContainer.append(houseReviews);
 }
