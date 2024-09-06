@@ -139,6 +139,20 @@
     border: 1px solid $color-grey-1;
     margin: 3.2rem 0;
   }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+  }
+
+  &__partner {
+    margin-right: auto;
+
+    &-img {
+      height: 5.6rem;
+      width: 5.6rem;
+    }
+  }
 }
 
 .reviews {
