@@ -9,9 +9,9 @@ function createPartner(parent, partner) {
 
   // Add attributes and content
 
-  partnerContainer.className = `${parent}__partner`;
-  partnerImage.className = `${parent}__partner-image`;
-  partnerText.className = `${parent}__partner-text`;
+  partnerContainer.className = `${parent}__partner partner`;
+  partnerImage.className = `${parent}__partner-image partner__image`;
+  partnerText.className = 'partner__text';
   partnerName.className = 'subtitle';
   partnerLabel.className = 'label-regular text-grey-2';
 
