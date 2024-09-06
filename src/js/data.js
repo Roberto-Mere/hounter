@@ -29,7 +29,7 @@ export const data = {
       partner: {
         image: 'src/assets/img/avatar-dianne.png',
         name: 'Dianne Russell',
-        location: 'Manchester, Kentucky',
+        label: 'Manchester, Kentucky',
       },
     },
     {
@@ -40,7 +40,7 @@ export const data = {
       partner: {
         image: 'src/assets/img/avatar-robert.png',
         name: 'Robert Fox',
-        location: 'Dr. San Jose, South Dakota',
+        label: 'Dr. San Jose, South Dakota',
       },
     },
     {
@@ -51,7 +51,7 @@ export const data = {
       partner: {
         image: 'src/assets/img/avatar-ronald.png',
         name: 'Ronald Richards',
-        location: 'Santa Ana, Illinois',
+        label: 'Santa Ana, Illinois',
       },
     },
     {
@@ -62,7 +62,7 @@ export const data = {
       partner: {
         image: 'src/assets/img/avatar-jenny.png',
         name: 'Jenny Wilson',
-        location: 'Preston Rd. Inglewood, Maine 98380',
+        label: 'Preston Rd. Inglewood, Maine 98380',
       },
     },
   ],

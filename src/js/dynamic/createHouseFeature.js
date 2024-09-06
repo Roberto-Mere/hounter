@@ -1,4 +1,5 @@
 import { formatNumber } from '../utils';
+import createPartner from './createPartner';
 
 function createHouseFeature({ image, label, title, price, partner }) {
   // Create elements
@@ -15,11 +16,7 @@ function createHouseFeature({ image, label, title, price, partner }) {
   const featureTitle = document.createElement('h3');
   const featurePrice = document.createElement('h4');
 
-  const featurePartner = document.createElement('div');
-  const featurePartnerImage = document.createElement('img');
-  const featurePartnerText = document.createElement('div');
-  const featurePartnerName = document.createElement('p');
-  const featurePartnerLocation = document.createElement('p');
+  const featurePartner = createPartner('house-feature', partner);
 
   // Add attributes and content
 
@@ -46,12 +43,6 @@ function createHouseFeature({ image, label, title, price, partner }) {
   featureTitle.className = 'heading-tertiary';
   featurePrice.className = 'heading-th text-grey-3';
 
-  featurePartner.className = 'house-feature__partner';
-  featurePartnerImage.className = 'house-feature__partner-image';
-  featurePartnerText.className = 'house-feature__partner-text';
-  featurePartnerName.className = 'subtitle';
-  featurePartnerLocation.className = 'label-regular text-grey-2';
-
   featureImage.src = image;
 
   featureLabelText.textContent = label;
@@ -61,18 +52,12 @@ function createHouseFeature({ image, label, title, price, partner }) {
 
   featureTitle.textContent = title;
   featurePrice.textContent = `$ ${formatNumber(price)}`;
-  featurePartnerImage.src = partner.image;
-  featurePartnerName.textContent = partner.name;
-  featurePartnerLocation.textContent = partner.location;
 
   // Append elements
 
   featureLabel.append(featureLabelImage, featureLabelText);
 
   featureText.append(featureTitle, featurePrice);
-
-  featurePartnerText.append(featurePartnerName, featurePartnerLocation);
-  featurePartner.append(featurePartnerImage, featurePartnerText);
 
   featureContainer.append(
     featureImage,
