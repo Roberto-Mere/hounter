@@ -1,28 +1,34 @@
+import {
+  createContainerElement,
+  createImageElement,
+  createTextElement,
+} from './createElements';
+
 function createPartner(parent, partner) {
-  // Create elements
+  const partnerLabel = createTextElement(
+    'p',
+    'label-regular text-grey-2',
+    partner.label
+  );
+  const partnerName = createTextElement('p', 'subtitle', partner.name);
+  const partnerText = createContainerElement(
+    'div',
+    'partner__text',
+    partnerName,
+    partnerLabel
+  );
 
-  const partnerContainer = document.createElement('div');
-  const partnerImage = document.createElement('img');
-  const partnerText = document.createElement('div');
-  const partnerName = document.createElement('p');
-  const partnerLabel = document.createElement('p');
+  const partnerImage = createImageElement(
+    `${parent}__partner-image partner__image`,
+    partner.image
+  );
 
-  // Add attributes and content
-
-  partnerContainer.className = `${parent}__partner partner`;
-  partnerImage.className = `${parent}__partner-image partner__image`;
-  partnerText.className = 'partner__text';
-  partnerName.className = 'subtitle';
-  partnerLabel.className = 'label-regular text-grey-2';
-
-  partnerImage.src = partner.image;
-  partnerName.textContent = partner.name;
-  partnerLabel.textContent = partner.label;
-
-  // Append elements
-
-  partnerText.append(partnerName, partnerLabel);
-  partnerContainer.append(partnerImage, partnerText);
+  const partnerContainer = createContainerElement(
+    'div',
+    `${parent}__partner partner`,
+    partnerImage,
+    partnerText
+  );
 
   return partnerContainer;
 }

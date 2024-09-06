@@ -1,58 +1,55 @@
+import {
+  createContainerElement,
+  createImageElement,
+  createTextElement,
+} from './createElements';
 import createPartner from './createPartner';
 
 function createReview({ image, title, description, partner, rating }) {
-  // Create elements
+  const reviewImage = createImageElement('review__image', image);
 
-  const reviewContainer = document.createElement('div');
+  const reviewTitle = createTextElement('h4', 'heading-th', title);
+  const reviewDescription = createTextElement(
+    'p',
+    'label-regular text-grey-3',
+    description
+  );
+  const reviewText = createContainerElement(
+    'div',
+    'review__text',
+    reviewTitle,
+    reviewDescription
+  );
 
-  const reviewImage = document.createElement('img');
-
-  const reviewContent = document.createElement('div');
-
-  const reviewText = document.createElement('div');
-  const reviewTitle = document.createElement('h4');
-  const reviewDescription = document.createElement('p');
-
-  const reviewInfo = document.createElement('div');
   const reviewPartner = createPartner('review', partner);
-  const reviewRating = document.createElement('div');
-  const reviewRatingIcon = document.createElement('img');
-  const reviewRatingScore = document.createElement('h4');
+  const reviewRatingIcon = createImageElement('', 'src/assets/svg/star.svg');
+  const reviewRatingScore = createTextElement('h4', 'heading-th', rating);
+  const reviewRating = createContainerElement(
+    'div',
+    'review__rating',
+    reviewRatingIcon,
+    reviewRatingScore
+  );
+  const reviewInfo = createContainerElement(
+    'div',
+    'review__info',
+    reviewPartner,
+    reviewRating
+  );
 
-  // Add attributes and content
+  const reviewContent = createContainerElement(
+    'div',
+    'review__content',
+    reviewText,
+    reviewInfo
+  );
 
-  reviewContainer.className = 'review';
-
-  reviewImage.className = 'review__image';
-
-  reviewContent.className = 'review__content';
-
-  reviewText.className = 'review__text';
-  reviewTitle.className = 'heading-th';
-  reviewDescription.className = 'label-regular text-grey-3';
-
-  reviewInfo.className = 'review__info';
-  reviewRating.className = 'review__rating';
-  reviewRatingScore.className = 'heading-th';
-
-  reviewImage.src = image;
-
-  reviewTitle.textContent = title;
-  reviewDescription.textContent = description;
-
-  reviewRatingIcon.src = 'src/assets/svg/star.svg';
-  reviewRatingScore.textContent = rating;
-
-  // Append elements
-
-  reviewText.append(reviewTitle, reviewDescription);
-
-  reviewRating.append(reviewRatingIcon, reviewRatingScore);
-  reviewInfo.append(reviewPartner, reviewRating);
-
-  reviewContent.append(reviewText, reviewInfo);
-
-  reviewContainer.append(reviewImage, reviewContent);
+  const reviewContainer = createContainerElement(
+    'div',
+    'review',
+    reviewImage,
+    reviewContent
+  );
 
   return reviewContainer;
 }

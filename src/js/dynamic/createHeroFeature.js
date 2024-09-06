@@ -1,42 +1,37 @@
+import {
+  createContainerElement,
+  createImageElement,
+  createTextElement,
+} from './createElements';
+
 function createHeroFeature({ title, label, images }) {
-  // Create elements
+  const featureLabel = createTextElement('p', 'label-small text-grey-2', label);
+  const featureTitle = createTextElement('p', 'body-semibold', title);
+  const featureText = createContainerElement(
+    'div',
+    'hero-feature__text',
+    featureTitle,
+    featureLabel
+  );
 
-  const featureContainer = document.createElement('div');
-
-  const featureImages = document.createElement('figure');
   const imageElements = [];
   images.forEach((img) => {
-    const featureImage = document.createElement('img');
-
-    featureImage.className = 'hero-feature__image';
-
-    featureImage.src = img;
+    const featureImage = createImageElement('hero-feature__image', img);
 
     imageElements.push(featureImage);
   });
+  const featureImages = createContainerElement(
+    'figure',
+    'hero-feature__images',
+    ...imageElements
+  );
 
-  const featureText = document.createElement('div');
-  const featureTitle = document.createElement('p');
-  const featureLabel = document.createElement('p');
-
-  // Add attributes and content
-
-  featureContainer.className = 'hero-feature';
-
-  featureImages.className = 'hero-feature__images';
-  featureText.className = 'hero-feature__text';
-  featureTitle.className = 'body-semibold';
-  featureLabel.className = 'label-small text-grey-2';
-
-  featureTitle.textContent = title;
-  featureLabel.textContent = label;
-
-  // Append elements
-
-  featureImages.append(...imageElements);
-  featureText.append(featureTitle, featureLabel);
-
-  featureContainer.append(featureImages, featureText);
+  const featureContainer = createContainerElement(
+    'div',
+    'hero-feature',
+    featureImages,
+    featureText
+  );
 
   return featureContainer;
 }
