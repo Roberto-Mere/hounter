@@ -112,3 +112,9 @@ export async function loadMoreArticles() {
     ),
   ];
 }
+
+export function getCurrentArticle(id) {
+  const currentArticle = state.articles.all.find((art) => art.id === id);
+
+  state.articles.current = currentArticle;
+}
