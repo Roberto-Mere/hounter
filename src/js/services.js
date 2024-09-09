@@ -18,6 +18,7 @@ export async function loadHeroFeatures() {
 
     state.heroFeatures = data.map((feat) => {
       return {
+        id: feat.id,
         title: feat.title,
         label: feat.label,
         images: feat.images,
@@ -34,6 +35,7 @@ export async function loadHouseFeatures() {
 
     state.houseFeatures = data.map((feat) => {
       return {
+        id: feat.id,
         image: feat.image,
         label: feat.label,
         title: feat.title,
@@ -56,6 +58,7 @@ export async function loadReviews() {
 
     state.reviews = data.map((rev) => {
       return {
+        id: rev.id,
         image: rev.image,
         title: rev.title,
         description: rev.description,
@@ -80,6 +83,7 @@ export async function loadArticles() {
     state.articles.all = chooseRandomItems(data, state.articles.limit).map(
       (art) => {
         return {
+          id: art.id,
           image: art.image,
           title: art.title,
           description: art.description,
