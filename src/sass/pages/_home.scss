@@ -169,6 +169,13 @@
   &__heading {
     margin-bottom: 4rem;
   }
+
+  &__house-reviews {
+    transform: translateX(33.33%);
+    width: max-content;
+    display: flex;
+    gap: 3.2rem;
+  }
 }
 
 .articles {
