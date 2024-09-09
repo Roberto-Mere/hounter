@@ -1,4 +1,5 @@
 import * as services from './services';
+import * as dom from './dom';
 import HeroFeature from './dynamic/HeroFeature';
 import HouseFeature from './dynamic/HouseFeature';
 import Review from './dynamic/Review';
@@ -41,11 +42,24 @@ async function handleArticle() {
   });
 }
 
+async function handleMoreArticles() {
+  await services.loadMoreArticles();
+
+  const articles = services.state.articles;
+
+  articles.all
+    .slice(articles.all.length - articles.perRender)
+    .forEach((art) => {
+      ArticlePreview.render(art);
+    });
+}
+
 function init() {
   HeroFeature.addHandlerRender(handleHeroFeatures);
   HouseFeature.addHandlerRender(handleHouseFeatures);
   Review.addHandlerRender(handleReviews);
   Article.addHandlerRender(handleArticle);
+  dom.addHandlerMoreArticles(handleMoreArticles);
 }
 
 init();
