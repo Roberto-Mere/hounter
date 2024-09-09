@@ -1,7 +1,7 @@
 .review {
-  width: 53vw;
+  width: 55vw;
   display: grid;
-  grid-template-rows: 30vh 20vh 1fr;
+  grid-template-rows: 28vh 20vh 1fr;
 
   &__partner {
     &-image {
@@ -34,6 +34,10 @@
 
   &__text {
     margin-bottom: 2.4rem;
+
+    & :first-child {
+      margin-bottom: 1.6rem;
+    }
   }
 
   &__info {
