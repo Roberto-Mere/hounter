@@ -7,7 +7,7 @@ export const state = {
   reviews: [],
   articles: {
     all: [],
-    current: 1,
+    current: 0,
     limit: ARTICLES_LIMIT,
   },
 };
