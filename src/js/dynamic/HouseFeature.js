@@ -43,8 +43,7 @@ class HouseFeature extends Component {
           ? 'house-feature__label-new'
           : 'house-feature__label-deals'
       }`,
-      featureLabelImage,
-      featureLabelText
+      [featureLabelImage, featureLabelText]
     );
 
     const featurePrice = createTextElement(
@@ -53,23 +52,19 @@ class HouseFeature extends Component {
       `$ ${formatNumber(price)}`
     );
     const featureTitle = createTextElement('h3', 'heading-tertiary', title);
-    const featureText = createContainerElement(
-      'div',
-      'house-feature__text',
+    const featureText = createContainerElement('div', 'house-feature__text', [
       featureTitle,
-      featurePrice
-    );
+      featurePrice,
+    ]);
 
     const featurePartner = createPartner('house-feature', partner);
 
-    const featureContainer = createContainerElement(
-      'div',
-      'house-feature',
+    const featureContainer = createContainerElement('div', 'house-feature', [
       featureImage,
       featureLabel,
       featureText,
-      featurePartner
-    );
+      featurePartner,
+    ]);
 
     return featureContainer;
   }

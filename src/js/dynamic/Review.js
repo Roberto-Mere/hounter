@@ -18,42 +18,32 @@ class Review extends Component {
       'label-regular text-grey-3',
       description
     );
-    const reviewText = createContainerElement(
-      'div',
-      'review__text',
+    const reviewText = createContainerElement('div', 'review__text', [
       reviewTitle,
-      reviewDescription
-    );
+      reviewDescription,
+    ]);
 
     const reviewPartner = createPartner('review', partner);
     const reviewRatingIcon = createImageElement('', 'src/assets/svg/star.svg');
     const reviewRatingScore = createTextElement('h4', 'heading-th', rating);
-    const reviewRating = createContainerElement(
-      'div',
-      'review__rating',
+    const reviewRating = createContainerElement('div', 'review__rating', [
       reviewRatingIcon,
-      reviewRatingScore
-    );
-    const reviewInfo = createContainerElement(
-      'div',
-      'review__info',
+      reviewRatingScore,
+    ]);
+    const reviewInfo = createContainerElement('div', 'review__info', [
       reviewPartner,
-      reviewRating
-    );
+      reviewRating,
+    ]);
 
-    const reviewContent = createContainerElement(
-      'div',
-      'review__content',
+    const reviewContent = createContainerElement('div', 'review__content', [
       reviewText,
-      reviewInfo
-    );
+      reviewInfo,
+    ]);
 
-    const reviewContainer = createContainerElement(
-      'div',
-      'review',
+    const reviewContainer = createContainerElement('div', 'review', [
       reviewImage,
-      reviewContent
-    );
+      reviewContent,
+    ]);
 
     return reviewContainer;
   }

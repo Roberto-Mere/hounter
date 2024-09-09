@@ -15,12 +15,10 @@ class HeroFeature extends Component {
       label
     );
     const featureTitle = createTextElement('p', 'body-semibold', title);
-    const featureText = createContainerElement(
-      'div',
-      'hero-feature__text',
+    const featureText = createContainerElement('div', 'hero-feature__text', [
       featureTitle,
-      featureLabel
-    );
+      featureLabel,
+    ]);
 
     const imageElements = [];
     images.forEach((img) => {
@@ -31,15 +29,13 @@ class HeroFeature extends Component {
     const featureImages = createContainerElement(
       'figure',
       'hero-feature__images',
-      ...imageElements
+      imageElements
     );
 
-    const featureContainer = createContainerElement(
-      'div',
-      'hero-feature',
+    const featureContainer = createContainerElement('div', 'hero-feature', [
       featureImages,
-      featureText
-    );
+      featureText,
+    ]);
 
     return featureContainer;
   }

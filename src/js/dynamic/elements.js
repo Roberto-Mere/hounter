@@ -20,20 +20,28 @@ function createElement(type, attributes, ...elements) {
   return element;
 }
 
-export function createTextElement(type, className, textContent) {
-  const textElement = createElement(type, { className, textContent });
+export function createTextElement(type, className, textContent, attributes) {
+  const textElement = createElement(type, {
+    className,
+    textContent,
+    ...attributes,
+  });
 
   return textElement;
 }
 
-export function createImageElement(className, src) {
-  const imageElement = createElement('img', { className, src });
+export function createImageElement(className, src, attributes) {
+  const imageElement = createElement('img', { className, src, ...attributes });
 
   return imageElement;
 }
 
-export function createContainerElement(type, className, ...elements) {
-  const conatinerElement = createElement(type, { className }, ...elements);
+export function createContainerElement(type, className, elements, attributes) {
+  const conatinerElement = createElement(
+    type,
+    { className, ...attributes },
+    ...elements
+  );
 
   return conatinerElement;
 }
@@ -45,12 +53,10 @@ export function createPartner(parent, partner) {
     partner.label
   );
   const partnerName = createTextElement('p', 'subtitle', partner.name);
-  const partnerText = createContainerElement(
-    'div',
-    'partner__text',
+  const partnerText = createContainerElement('div', 'partner__text', [
     partnerName,
-    partnerLabel
-  );
+    partnerLabel,
+  ]);
 
   const partnerImage = createImageElement(
     `${parent}__partner-image partner__image`,
@@ -60,8 +66,7 @@ export function createPartner(parent, partner) {
   const partnerContainer = createContainerElement(
     'div',
     `${parent}__partner partner`,
-    partnerImage,
-    partnerText
+    [partnerImage, partnerText]
   );
 
   return partnerContainer;
