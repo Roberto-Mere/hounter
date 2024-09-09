@@ -54,11 +54,19 @@ async function handleMoreArticles() {
     });
 }
 
+async function handleArticlePreview(id) {
+  services.getCurrentArticle(id);
+
+  Article.clear();
+  Article.render(services.state.articles.current);
+}
+
 function init() {
   HeroFeature.addHandlerRender(handleHeroFeatures);
   HouseFeature.addHandlerRender(handleHouseFeatures);
   Review.addHandlerRender(handleReviews);
   Article.addHandlerRender(handleArticle);
+  ArticlePreview.addHandlerClick(handleArticlePreview);
   dom.addHandlerMoreArticles(handleMoreArticles);
 }
 
