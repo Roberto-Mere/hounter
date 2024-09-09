@@ -3,11 +3,11 @@ function createElement(type, attributes, ...elements) {
 
   const element = document.createElement(type);
 
-  // Add attributes and content
+  // Add attributes
 
   if (attributes) {
     for (const [key, value] of Object.entries(attributes)) {
-      element[key] = value;
+      element.setAttribute(key, value);
     }
   }
 
@@ -21,17 +21,25 @@ function createElement(type, attributes, ...elements) {
 }
 
 export function createTextElement(type, className, textContent, attributes) {
-  const textElement = createElement(type, {
-    className,
-    textContent,
-    ...attributes,
-  });
+  const text = document.createTextNode(textContent);
+  const textElement = createElement(
+    type,
+    {
+      class: className,
+      ...attributes,
+    },
+    text
+  );
 
   return textElement;
 }
 
 export function createImageElement(className, src, attributes) {
-  const imageElement = createElement('img', { className, src, ...attributes });
+  const imageElement = createElement('img', {
+    class: className,
+    src,
+    ...attributes,
+  });
 
   return imageElement;
 }
@@ -39,7 +47,7 @@ export function createImageElement(className, src, attributes) {
 export function createContainerElement(type, className, elements, attributes) {
   const conatinerElement = createElement(
     type,
-    { className, ...attributes },
+    { class: className, ...attributes },
     ...elements
   );
 
