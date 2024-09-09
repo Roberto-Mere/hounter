@@ -1,0 +1,12 @@
+.article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+
+  &__image {
+    height: 31vh;
+    width: 100%;
+    border-radius: 1.6rem;
+    object-fit: cover;
+  }
+}
