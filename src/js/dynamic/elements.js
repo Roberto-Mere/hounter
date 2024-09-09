@@ -54,13 +54,43 @@ export function createContainerElement(type, className, elements, attributes) {
   return conatinerElement;
 }
 
-export function createPartner(parent, partner) {
+export function createUser({ image, name }) {
+  const userImage = createImageElement('user__image', image);
+  const userName = createTextElement('p', 'label-regular text-grey-3', name);
+
+  const userContainer = createContainerElement('div', 'user', [
+    userImage,
+    userName,
+  ]);
+
+  return userContainer;
+}
+
+export function createArticleInfo({ readTime, date }) {
+  const articleInfoIcon = createImageElement(
+    'article-info__icon',
+    'src/assets/svg/time.svg'
+  );
+  const articleInfoText = createTextElement(
+    'p',
+    'label-regular text-grey-2',
+    `${readTime} min read | ${new Date(date).toDateString().slice(4)}`
+  );
+  const articleInfoContainer = createContainerElement('div', 'article-info', [
+    articleInfoIcon,
+    articleInfoText,
+  ]);
+
+  return articleInfoContainer;
+}
+
+export function createPartner(parent, { label, name, image }) {
   const partnerLabel = createTextElement(
     'p',
     'label-regular text-grey-2',
-    partner.label
+    label
   );
-  const partnerName = createTextElement('p', 'subtitle', partner.name);
+  const partnerName = createTextElement('p', 'subtitle', name);
   const partnerText = createContainerElement('div', 'partner__text', [
     partnerName,
     partnerLabel,
@@ -68,7 +98,7 @@ export function createPartner(parent, partner) {
 
   const partnerImage = createImageElement(
     `${parent}__partner-image partner__image`,
-    partner.image
+    image
   );
 
   const partnerContainer = createContainerElement(
