@@ -1,10 +1,15 @@
-import { asyncRequest } from './utils';
-import { API_URL } from './config';
+import { asyncRequest, chooseRandomItems } from './utils';
+import { API_URL, ARTICLES_LIMIT } from './config';
 
 export const state = {
   heroFeatures: [],
   houseFeatures: [],
   reviews: [],
+  articles: {
+    all: [],
+    current: 1,
+    limit: ARTICLES_LIMIT,
+  },
 };
 
 export async function loadHeroFeatures() {
@@ -60,8 +65,32 @@ export async function loadReviews() {
           name: rev.partner.name,
           label: rev.partner.label,
         },
+        id: rev.id,
       };
     });
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function loadArticles() {
+  try {
+    const data = await asyncRequest(`${API_URL}/articles`);
+
+    state.articles.all = chooseRandomItems(data, state.articles.limit).map(
+      (art) => {
+        return {
+          image: art.image,
+          title: art.title,
+          description: art.description,
+          user: {
+            image: art.user.image,
+            name: art.user.name,
+          },
+          info: art.info,
+        };
+      }
+    );
   } catch (err) {
     throw err;
   }
