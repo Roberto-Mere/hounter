@@ -1,5 +1,5 @@
 import { asyncRequest, chooseRandomItems } from './utils';
-import { API_URL, ARTICLES_LIMIT } from './config';
+import { API_URL, ARTICLES_PER_RENDER } from './config';
 
 export const state = {
   heroFeatures: [],
@@ -8,7 +8,7 @@ export const state = {
   articles: {
     all: [],
     current: 0,
-    limit: ARTICLES_LIMIT,
+    perRender: ARTICLES_PER_RENDER,
   },
 };
 
@@ -76,26 +76,39 @@ export async function loadReviews() {
   }
 }
 
+function createArticleObject(article) {
+  return {
+    id: article.id,
+    image: article.image,
+    title: article.title,
+    description: article.description,
+    user: {
+      image: article.user.image,
+      name: article.user.name,
+    },
+    info: article.info,
+  };
+}
+
 export async function loadArticles() {
   try {
     const data = await asyncRequest(`${API_URL}/articles`);
 
-    state.articles.all = chooseRandomItems(data, state.articles.limit).map(
-      (art) => {
-        return {
-          id: art.id,
-          image: art.image,
-          title: art.title,
-          description: art.description,
-          user: {
-            image: art.user.image,
-            name: art.user.name,
-          },
-          info: art.info,
-        };
-      }
+    state.articles.all = chooseRandomItems(data, state.articles.perRender).map(
+      (art) => createArticleObject(art)
     );
   } catch (err) {
     throw err;
   }
+}
+
+export async function loadMoreArticles() {
+  const data = await asyncRequest(`${API_URL}/articles`);
+
+  state.articles.all = [
+    ...state.articles.all,
+    ...chooseRandomItems(data, state.articles.perRender).map((art) =>
+      createArticleObject(art)
+    ),
+  ];
 }
