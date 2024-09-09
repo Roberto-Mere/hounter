@@ -1,0 +1,53 @@
+.review {
+  width: 55vw;
+  display: grid;
+  grid-template-rows: 28vh 20vh 1fr;
+
+  &__partner {
+    &-image {
+      height: 4rem;
+      width: 4rem;
+    }
+  }
+
+  &__image {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0.8rem;
+  }
+
+  &__content {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 3.2rem;
+    border-radius: 1.6rem;
+    margin: 0 8.6rem;
+    background-color: $color-white;
+    box-shadow: $shadow;
+  }
+
+  &__text {
+    margin-bottom: 2.4rem;
+
+    & :first-child {
+      margin-bottom: 1.6rem;
+    }
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__rating {
+    display: flex;
+    gap: 1.6rem;
+  }
+}

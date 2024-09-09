@@ -1,0 +1,15 @@
+.partner {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+
+  &__text {
+    & :not(:last-child) {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  &__image {
+    border-radius: 50%;
+  }
+}
