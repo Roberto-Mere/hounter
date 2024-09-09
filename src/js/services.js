@@ -1,10 +1,15 @@
-import { asyncRequest } from './utils';
-import { API_URL } from './config';
+import { asyncRequest, chooseRandomItems } from './utils';
+import { API_URL, ARTICLES_LIMIT } from './config';
 
 export const state = {
   heroFeatures: [],
   houseFeatures: [],
   reviews: [],
+  articles: {
+    all: [],
+    current: 0,
+    limit: ARTICLES_LIMIT,
+  },
 };
 
 export async function loadHeroFeatures() {
@@ -13,6 +18,7 @@ export async function loadHeroFeatures() {
 
     state.heroFeatures = data.map((feat) => {
       return {
+        id: feat.id,
         title: feat.title,
         label: feat.label,
         images: feat.images,
@@ -29,6 +35,7 @@ export async function loadHouseFeatures() {
 
     state.houseFeatures = data.map((feat) => {
       return {
+        id: feat.id,
         image: feat.image,
         label: feat.label,
         title: feat.title,
@@ -51,6 +58,7 @@ export async function loadReviews() {
 
     state.reviews = data.map((rev) => {
       return {
+        id: rev.id,
         image: rev.image,
         title: rev.title,
         description: rev.description,
@@ -60,8 +68,33 @@ export async function loadReviews() {
           name: rev.partner.name,
           label: rev.partner.label,
         },
+        id: rev.id,
       };
     });
+  } catch (err) {
+    throw err;
+  }
+}
+
+export async function loadArticles() {
+  try {
+    const data = await asyncRequest(`${API_URL}/articles`);
+
+    state.articles.all = chooseRandomItems(data, state.articles.limit).map(
+      (art) => {
+        return {
+          id: art.id,
+          image: art.image,
+          title: art.title,
+          description: art.description,
+          user: {
+            image: art.user.image,
+            name: art.user.name,
+          },
+          info: art.info,
+        };
+      }
+    );
   } catch (err) {
     throw err;
   }

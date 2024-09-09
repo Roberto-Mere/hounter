@@ -27,3 +27,18 @@ export async function asyncRequest(url) {
     throw err;
   }
 }
+
+export function chooseRandomItems(items, numberOfItems) {
+  const randomItems = [];
+
+  while (randomItems.length < numberOfItems) {
+    const randomNumber = Math.floor(Math.random() * items.length);
+    const choice = items[randomNumber];
+
+    if (!randomItems.includes(choice)) {
+      randomItems.push(choice);
+    }
+  }
+
+  return randomItems;
+}

@@ -1,6 +1,7 @@
 {
   "heroFeatures": [
     {
+      "id": 1,
       "title": "1K+ People",
       "label": "Successfully Getting Home",
       "images": [
@@ -10,11 +11,13 @@
       ]
     },
     {
+      "id": 2,
       "title": "56 Houses",
       "label": "Sold Monthly",
       "images": ["src/assets/img/articles-4.png"]
     },
     {
+      "id": 3,
       "title": "4K+ People",
       "label": "Looking for New Homes",
       "images": ["src/assets/img/avatar-ashley.png"]
@@ -22,6 +25,7 @@
   ],
   "houseFeatures": [
     {
+      "id": 1,
       "image": "src/assets/img/features-1.png",
       "label": "Popular",
       "title": "Roselands House",
@@ -33,6 +37,7 @@
       }
     },
     {
+      "id": 2,
       "image": "src/assets/img/features-2.png",
       "label": "New house",
       "title": "Woodlandside",
@@ -44,6 +49,7 @@
       }
     },
     {
+      "id": 3,
       "image": "src/assets/img/features-3.png",
       "label": "Best deals",
       "title": "Lighthouse",
@@ -55,7 +61,8 @@
       }
     },
     {
-      "image": "src/assets/img/features-1.png",
+      "id": 4,
+      "image": "src/assets/img/features-4.png",
       "label": "Popular",
       "title": "Cosmo's House",
       "price": 22000000,
@@ -68,6 +75,7 @@
   ],
   "reviews": [
     {
+      "id": 1,
       "image": "src/assets/img/reviews-1.png",
       "title": "My house sold out fast!",
       "description": "I was finally able to sell my house quickly through Hounter by immediately setting me up with people who wanted my house. I also do not get a discount from the sale of my house. Awesome!",
@@ -79,6 +87,7 @@
       "rating": 4.3
     },
     {
+      "id": 2,
       "image": "src/assets/img/reviews-2.png",
       "title": "Best! I got the house I wanted through Hounter",
       "description": "Through this website I can get a house with the type and specifications I want very easily, without a complicated process to be able to find information on the house we want.",
@@ -90,6 +99,7 @@
       "rating": 4.6
     },
     {
+      "id": 3,
       "image": "src/assets/img/reviews-3.png",
       "title": "Through the Hounter, I can get a house for my self",
       "description": "By looking for information about what kind of house we want, we managed to get the house we wanted very quickly, and directly connected with the seller to be able to ask about the details, very helpful!",
@@ -99,6 +109,64 @@
         "label": "Head of Marketing"
       },
       "rating": 4.6
+    }
+  ],
+  "articles": [
+    {
+      "id": 1,
+      "image": "src/assets/img/articles-1.png",
+      "title": "The things we need to check when we want to buy a house",
+      "description": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+      "user": {
+        "image": "src/assets/img/avatar-dianne.png",
+        "name": "Dianne Russell"
+      },
+      "info": {
+        "readTime": "4",
+        "date": "2021-04-25T05:00:00.000Z"
+      }
+    },
+    {
+      "id": 2,
+      "image": "src/assets/img/articles-2.png",
+      "title": "7 Ways to distinguish the quality of the house we want to buy",
+      "description": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+      "user": {
+        "image": "src/assets/img/avatar-courtney.png",
+        "name": "Courtney Henry"
+      },
+      "info": {
+        "readTime": "6",
+        "date": "2021-04-24T05:00:00.000Z"
+      }
+    },
+    {
+      "id": 3,
+      "image": "src/assets/img/articles-3.png",
+      "title": "The best way to know the quality of the house we want to buy",
+      "description": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+      "user": {
+        "image": "src/assets/img/avatar-robert.png",
+        "name": "Robert Fox"
+      },
+      "info": {
+        "readTime": "2",
+        "date": "2021-04-24T05:00:00.000Z"
+      }
+    },
+    {
+      "id": 4,
+      "image": "src/assets/img/articles-4.png",
+      "title": "12 Things to know before buying a house",
+      "description": "Want to buy a house but are unsure about what we should know, here I will try to explain what we should know and check when we want to buy a house",
+      "user": {
+        "image": "src/assets/img/avatar-jenny.png",
+        "name": "Jenny Wilson"
+      },
+      "info": {
+        "readTime": "8",
+        "date": "2021-04-25T05:00:00.000Z"
+      }
     }
   ]
 }
