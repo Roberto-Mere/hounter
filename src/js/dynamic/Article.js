@@ -8,7 +8,7 @@ import {
 } from './elements';
 
 class Article extends Component {
-  _parentContainer = document.querySelector('.articles__user-articles');
+  _parentContainer = document.querySelector('.articles__main');
 
   _createElement({ image, title, description, user, info }) {
     const articleImage = createImageElement('article__image', image);

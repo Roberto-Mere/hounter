@@ -184,6 +184,7 @@
   align-items: center;
   margin: 0 12.4rem;
   margin-bottom: 12.4rem;
+  @include blob(-16%, -26%, #82ffe8, 20%, -24%, #c8ff82);
 
   &__label {
     margin-bottom: 1.2rem;
