@@ -26,6 +26,7 @@
   "houseFeatures": [
     {
       "id": 1,
+      "type": "house",
       "image": "src/assets/img/features-1.png",
       "label": "Popular",
       "title": "Roselands House",
@@ -38,6 +39,7 @@
     },
     {
       "id": 2,
+      "type": "villa",
       "image": "src/assets/img/features-2.png",
       "label": "New house",
       "title": "Woodlandside",
@@ -50,6 +52,7 @@
     },
     {
       "id": 3,
+      "type": "apartment",
       "image": "src/assets/img/features-3.png",
       "label": "Best deals",
       "title": "Lighthouse",
@@ -62,6 +65,7 @@
     },
     {
       "id": 4,
+      "type": "house",
       "image": "src/assets/img/features-4.png",
       "label": "Popular",
       "title": "Cosmo's House",
