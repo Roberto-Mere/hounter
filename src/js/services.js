@@ -29,9 +29,15 @@ export async function loadHeroFeatures() {
   }
 }
 
-export async function loadHouseFeatures() {
+export async function loadHouseFeatures(filter = null) {
   try {
-    const data = await asyncRequest(`${API_URL}/houseFeatures`);
+    let data;
+
+    if (!filter) {
+      data = await asyncRequest(`${API_URL}/houseFeatures`);
+    } else {
+      data = await asyncRequest(`${API_URL}/houseFeatures?type=${filter}`);
+    }
 
     state.houseFeatures = data.map((feat) => {
       return {
