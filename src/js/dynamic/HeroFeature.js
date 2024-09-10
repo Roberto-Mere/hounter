@@ -6,7 +6,7 @@ import {
 } from './elements';
 
 class HeroFeature extends Component {
-  _parentContainer = document.querySelector('.marquee__content');
+  _parentContainer = document.querySelector('.marquee__content-1');
 
   _createElement({ title, label, images }) {
     const featureLabel = createTextElement(
@@ -41,8 +41,7 @@ class HeroFeature extends Component {
   }
 
   renderMirror(data) {
-    const mirrorParentElement =
-      document.querySelectorAll('.marquee__content')[1];
+    const mirrorParentElement = document.querySelector('.marquee__content-2');
 
     mirrorParentElement.append(this._createElement(data));
   }
