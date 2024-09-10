@@ -12,6 +12,10 @@ async function handleHeroFeatures() {
   services.state.heroFeatures.forEach((feat) => {
     HeroFeature.render(feat);
   });
+
+  services.state.heroFeatures.forEach((feat) => {
+    HeroFeature.renderMirror(feat);
+  });
 }
 
 async function handleHouseFeatures() {
