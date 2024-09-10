@@ -50,10 +50,14 @@
         </a>
         <ul class="list nav__list">
           <li class="nav__list-item">
-            <button class="btn btn--small">About Us</button>
+            <button class="btn btn--small nav__option" data-section="reviews">
+              About Us
+            </button>
           </li>
           <li class="nav__list-item">
-            <button class="btn btn--small">Article</button>
+            <button class="btn btn--small nav__option" data-section="articles">
+              Article
+            </button>
           </li>
           <li>
             <button class="select select--small">
@@ -73,7 +77,10 @@
                 </svg>
               </div>
               <div class="select__options">
-                <label class="select__option">
+                <label
+                  class="select__option nav__option"
+                  data-section="features"
+                >
                   <input
                     type="radio"
                     name="property"
@@ -82,7 +89,7 @@
                   />
                   <span class="select__option-text">Feature</span>
                 </label>
-                <label class="select__option">
+                <label class="select__option nav__option" data-section="tour">
                   <input
                     type="radio"
                     name="property"
@@ -95,7 +102,9 @@
             </button>
           </li>
           <li class="nav__list-item">
-            <button class="btn btn--light">Sign Up</button>
+            <button class="btn btn--light nav__option" data-section="subscribe">
+              Sign Up
+            </button>
           </li>
         </ul>
       </nav>
