@@ -1,0 +1,14 @@
+.marquee {
+  width: 100%;
+  gap: 1.6rem;
+  display: flex;
+
+  &__content {
+    min-width: 100%;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    gap: 1.6rem;
+    animation: marqueeScroll 5s linear infinite;
+  }
+}
