@@ -26,7 +26,7 @@
 
   &__hero {
     &-image {
-      display: grid;
+      display: flex;
       align-items: end;
       position: relative;
       z-index: -2;
@@ -54,12 +54,6 @@
         );
         border-radius: inherit;
       }
-    }
-
-    &-features {
-      width: max-content;
-      display: flex;
-      gap: 1.6rem;
     }
   }
 }

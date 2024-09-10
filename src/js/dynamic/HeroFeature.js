@@ -6,7 +6,7 @@ import {
 } from './elements';
 
 class HeroFeature extends Component {
-  _parentContainer = document.querySelector('.header__hero-features');
+  _parentContainer = document.querySelector('.marquee__content-1');
 
   _createElement({ title, label, images }) {
     const featureLabel = createTextElement(
@@ -38,6 +38,12 @@ class HeroFeature extends Component {
     ]);
 
     return featureContainer;
+  }
+
+  renderMirror(data) {
+    const mirrorParentElement = document.querySelector('.marquee__content-2');
+
+    mirrorParentElement.append(this._createElement(data));
   }
 }
 export default new HeroFeature();
