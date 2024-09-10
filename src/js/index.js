@@ -68,6 +68,7 @@ function init() {
   Article.addHandlerRender(handleArticle);
   ArticlePreview.addHandlerClick(handleArticlePreview);
   dom.addHandlerMoreArticles(handleMoreArticles);
+  dom.addEventNavBar();
 }
 
 init();
