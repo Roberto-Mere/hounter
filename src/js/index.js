@@ -47,6 +47,7 @@ async function handleReviews() {
     Dot.render(i);
   });
 
+  Review.addTimerSlider();
   Dot.addEventClick();
 }
 
