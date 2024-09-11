@@ -63,4 +63,10 @@
   &:focus-within {
     outline: 1px solid blue;
   }
+
+  &--error {
+    &:focus-within {
+      outline: 1px solid $color-danger;
+    }
+  }
 }
