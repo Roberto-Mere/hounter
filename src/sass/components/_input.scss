@@ -48,6 +48,12 @@
         color: $color-grey-2;
       }
     }
+
+    &-count {
+      display: inline-block;
+      text-align: end;
+      width: 2.1rem;
+    }
   }
 
   &--checkbox {
