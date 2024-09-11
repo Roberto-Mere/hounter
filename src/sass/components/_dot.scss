@@ -1,0 +1,11 @@
+.dot {
+  height: 0.8rem;
+  width: 0.8rem;
+  background-color: $color-grey-1;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &--active {
+    background-color: $color-grey-3;
+  }
+}
