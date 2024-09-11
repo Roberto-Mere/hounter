@@ -83,14 +83,17 @@ export function addEventOpenModal() {
   const modalOverlay = document.querySelector('.modal__overlay');
 
   subscribeButton.addEventListener('click', () => {
+    const input = document.querySelector('.subscribe__input');
     const email = document.querySelector('.subscribe__email');
     const error = document.querySelector('.subscribe__email-error');
 
     if (email.validity.typeMismatch || email.value === '') {
+      input.classList.add('input--error');
       error.textContent = 'Please provide a valid email';
       return;
     }
 
+    input.classList.remove('input--error');
     error.textContent = '';
     email.value = '';
 
@@ -104,5 +107,32 @@ export function addEventCloseModal() {
 
   closeModalButton.addEventListener('click', () => {
     modalOverlay.style.visibility = 'hidden';
+  });
+}
+
+export function addEventFormSelect() {
+  const formSelect = document.querySelector('.message-form .select');
+
+  formSelect.addEventListener('click', (e) => {
+    const option = e.target.closest('.select__option');
+    if (!option) return;
+    const main = e.target
+      .closest('.select')
+      .querySelector('.select__option-main-text');
+    main.textContent = option.textContent;
+    main.classList.add('text-black');
+  });
+}
+
+export function addEventFormTextArea() {
+  const formTextArea = document.querySelector(
+    '.message-form .input--textarea-input'
+  );
+  const formTextAreaCount = document.querySelector(
+    '.message-form .input--textarea-count'
+  );
+
+  formTextArea.addEventListener('input', () => {
+    formTextAreaCount.textContent = formTextArea.value.length;
   });
 }

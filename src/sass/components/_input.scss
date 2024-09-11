@@ -48,6 +48,12 @@
         color: $color-grey-2;
       }
     }
+
+    &-count {
+      display: inline-block;
+      text-align: end;
+      width: 2.1rem;
+    }
   }
 
   &--checkbox {
@@ -62,5 +68,11 @@
 
   &:focus-within {
     outline: 1px solid blue;
+  }
+
+  &--error {
+    &:focus-within {
+      outline: 1px solid $color-danger;
+    }
   }
 }
