@@ -92,6 +92,7 @@ export function addEventOpenModal() {
     }
 
     error.textContent = '';
+    email.value = '';
 
     modalOverlay.style.visibility = 'visible';
   });
