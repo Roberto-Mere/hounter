@@ -46,6 +46,8 @@ async function handleReviews() {
     Review.render(rev);
     Dot.render(i);
   });
+
+  Dot.addEventClick();
 }
 
 async function handleArticle() {
