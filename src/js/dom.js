@@ -32,7 +32,7 @@ export function addEventArrows() {
 
   function goToSlide(slide) {
     houseFeatures.style.transform = `translateX(${
-      0 - (slide * 100) / houseFeatures.childNodes.length
+      0 - (slide * 100) / houseFeatures.childElementCount
     }%)`;
   }
 
@@ -49,7 +49,7 @@ export function addEventArrows() {
   btnRight.addEventListener('click', () => {
     const slide = btnRight.dataset.slide;
 
-    if (slide > houseFeatures.childNodes.length - 1) return;
+    if (slide > houseFeatures.childElementCount - 1) return;
 
     btnRight.dataset.slide = +slide + 1;
     btnLeft.dataset.slide = +btnLeft.dataset.slide + 1;
