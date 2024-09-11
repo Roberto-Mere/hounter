@@ -91,6 +91,8 @@ function init() {
   ArticlePreview.addHandlerClick(handleArticlePreview);
   dom.addHandlerMoreArticles(handleMoreArticles);
   dom.addEventNavBar();
+  dom.addEventOpenModal();
+  dom.addEventCloseModal();
 }
 
 init();

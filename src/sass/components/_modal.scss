@@ -1,0 +1,43 @@
+.modal {
+  &__overlay {
+    visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 3;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba($color-dark-black, 0.25);
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 2.4rem;
+    position: relative;
+    background-color: $color-white;
+    padding: 3.6rem;
+    border-radius: 1.6rem;
+  }
+
+  &__close {
+    align-self: end;
+    width: 1.6rem;
+    height: 1.6rem;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  &__image {
+    align-self: center;
+    @include blob(-5%, -15%, #b9ff82, -25%, 20%, #82bbff, 18rem);
+
+    &-blob {
+      z-index: 4;
+    }
+  }
+}
