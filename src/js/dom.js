@@ -136,3 +136,12 @@ export function addEventFormTextArea() {
     formTextAreaCount.textContent = formTextArea.value.length;
   });
 }
+
+export function addEventCookie() {
+  const cookieBanner = document.querySelector('.cookie');
+  const cookieClose = document.querySelector('.cookie__close');
+
+  cookieClose.addEventListener('click', () => {
+    cookieBanner.style.visibility = 'hidden';
+  });
+}
