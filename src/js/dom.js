@@ -83,14 +83,17 @@ export function addEventOpenModal() {
   const modalOverlay = document.querySelector('.modal__overlay');
 
   subscribeButton.addEventListener('click', () => {
+    const input = document.querySelector('.subscribe__input');
     const email = document.querySelector('.subscribe__email');
     const error = document.querySelector('.subscribe__email-error');
 
     if (email.validity.typeMismatch || email.value === '') {
+      input.classList.add('input--error');
       error.textContent = 'Please provide a valid email';
       return;
     }
 
+    input.classList.remove('input--error');
     error.textContent = '';
     email.value = '';
 
