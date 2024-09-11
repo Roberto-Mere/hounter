@@ -109,3 +109,30 @@ export function addEventCloseModal() {
     modalOverlay.style.visibility = 'hidden';
   });
 }
+
+export function addEventFormSelect() {
+  const formSelect = document.querySelector('.message-form .select');
+
+  formSelect.addEventListener('click', (e) => {
+    const option = e.target.closest('.select__option');
+    if (!option) return;
+    const main = e.target
+      .closest('.select')
+      .querySelector('.select__option-main-text');
+    main.textContent = option.textContent;
+    main.classList.add('text-black');
+  });
+}
+
+export function addEventFormTextArea() {
+  const formTextArea = document.querySelector(
+    '.message-form .input--textarea-input'
+  );
+  const formTextAreaCount = document.querySelector(
+    '.message-form .input--textarea-count'
+  );
+
+  formTextArea.addEventListener('input', () => {
+    formTextAreaCount.textContent = formTextArea.value.length;
+  });
+}

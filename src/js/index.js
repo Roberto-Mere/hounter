@@ -83,6 +83,11 @@ async function handleArticlePreview(id) {
 }
 
 function init() {
+  dom.addEventNavBar();
+  dom.addEventOpenModal();
+  dom.addEventCloseModal();
+  dom.addEventFormSelect();
+  dom.addEventFormTextArea();
   HeroFeature.addHandlerRender(handleHeroFeatures);
   HouseFeature.addHandlerRender(handleHouseFeatures);
   dom.addHandlerFilters(handleFilters);
@@ -90,9 +95,6 @@ function init() {
   Article.addHandlerRender(handleArticle);
   ArticlePreview.addHandlerClick(handleArticlePreview);
   dom.addHandlerMoreArticles(handleMoreArticles);
-  dom.addEventNavBar();
-  dom.addEventOpenModal();
-  dom.addEventCloseModal();
 }
 
 init();
