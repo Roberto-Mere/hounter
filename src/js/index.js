@@ -24,6 +24,8 @@ async function handleHouseFeatures() {
   services.state.houseFeatures.forEach((feat) => {
     HouseFeature.render(feat);
   });
+
+  dom.addEventArrows();
 }
 
 async function handleFilters(filter) {
