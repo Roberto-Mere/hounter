@@ -25,6 +25,26 @@ export function addHandlerFilters(handler) {
   });
 }
 
+export function addHandlerMoreArticles(handler) {
+  const moreArticles = document.querySelector('.articles__btn');
+
+  moreArticles.addEventListener('click', handler);
+}
+
+export function addEventNavBar() {
+  const navBar = document.querySelector('.nav');
+
+  navBar.addEventListener('click', (e) => {
+    const option = e.target.closest('.nav__option');
+
+    if (!option) return;
+
+    const section = document.querySelector(`.${option.dataset.section}`);
+
+    section.scrollIntoView({ behavior: 'smooth' });
+  });
+}
+
 export function addEventArrows() {
   const houseFeatures = document.querySelector('.features__house-features');
   const btnLeft = document.querySelector('.btn--arrow-left');
@@ -58,22 +78,30 @@ export function addEventArrows() {
   });
 }
 
-export function addHandlerMoreArticles(handler) {
-  const moreArticles = document.querySelector('.articles__btn');
+export function addEventOpenModal() {
+  const subscribeButton = document.querySelector('.subscribe__btn');
+  const modalOverlay = document.querySelector('.modal__overlay');
 
-  moreArticles.addEventListener('click', handler);
+  subscribeButton.addEventListener('click', () => {
+    const email = document.querySelector('.subscribe__email');
+    const error = document.querySelector('.subscribe__email-error');
+
+    if (email.validity.typeMismatch || email.value === '') {
+      error.textContent = 'Please provide a valid email';
+      return;
+    }
+
+    error.textContent = '';
+
+    modalOverlay.style.visibility = 'visible';
+  });
 }
 
-export function addEventNavBar() {
-  const navBar = document.querySelector('.nav');
+export function addEventCloseModal() {
+  const closeModalButton = document.querySelector('.modal__close');
+  const modalOverlay = document.querySelector('.modal__overlay');
 
-  navBar.addEventListener('click', (e) => {
-    const option = e.target.closest('.nav__option');
-
-    if (!option) return;
-
-    const section = document.querySelector(`.${option.dataset.section}`);
-
-    section.scrollIntoView({ behavior: 'smooth' });
+  closeModalButton.addEventListener('click', () => {
+    modalOverlay.style.visibility = 'hidden';
   });
 }
