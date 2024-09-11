@@ -47,6 +47,23 @@ class Review extends Component {
 
     return reviewContainer;
   }
+
+  addTimerSlider() {
+    setInterval(() => {
+      const dots = document.querySelector('.reviews__dots');
+      const currSlide = +document.querySelector('.dot--active').dataset.slide;
+      let nextSlide;
+
+      if (currSlide === dots.childElementCount - 1) {
+        nextSlide = 0;
+      } else {
+        nextSlide = currSlide + 1;
+      }
+
+      const nextDot = document.querySelector(`.dot[data-slide="${nextSlide}"]`);
+      nextDot.click();
+    }, 12500);
+  }
 }
 
 export default new Review();

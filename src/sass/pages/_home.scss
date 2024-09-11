@@ -166,10 +166,16 @@
   }
 
   &__house-reviews {
-    transform: translateX(33.33%);
     width: max-content;
     display: flex;
     gap: 3.2rem;
+    margin-bottom: 3.2rem;
+    transition: all 0.75s ease-in-out;
+  }
+
+  &__dots {
+    display: flex;
+    gap: 1.6rem;
   }
 }
 

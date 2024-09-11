@@ -5,6 +5,7 @@ import HouseFeature from './dynamic/HouseFeature';
 import Review from './dynamic/Review';
 import ArticlePreview from './dynamic/ArticlePreview';
 import Article from './dynamic/Article';
+import Dot from './dynamic/Dot';
 
 async function handleHeroFeatures() {
   await services.loadHeroFeatures();
@@ -41,9 +42,13 @@ async function handleFilters(filter) {
 async function handleReviews() {
   await services.loadReviews();
 
-  services.state.reviews.forEach((rev) => {
+  services.state.reviews.forEach((rev, i) => {
     Review.render(rev);
+    Dot.render(i);
   });
+
+  Review.addTimerSlider();
+  Dot.addEventClick();
 }
 
 async function handleArticle() {
