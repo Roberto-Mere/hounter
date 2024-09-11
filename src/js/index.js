@@ -24,6 +24,18 @@ async function handleHouseFeatures() {
   services.state.houseFeatures.forEach((feat) => {
     HouseFeature.render(feat);
   });
+
+  dom.addEventArrows();
+}
+
+async function handleFilters(filter) {
+  await services.loadHouseFeatures(filter);
+
+  HouseFeature.clear();
+
+  services.state.houseFeatures.forEach((feat) => {
+    HouseFeature.render(feat);
+  });
 }
 
 async function handleReviews() {
@@ -68,6 +80,7 @@ async function handleArticlePreview(id) {
 function init() {
   HeroFeature.addHandlerRender(handleHeroFeatures);
   HouseFeature.addHandlerRender(handleHouseFeatures);
+  dom.addHandlerFilters(handleFilters);
   Review.addHandlerRender(handleReviews);
   Article.addHandlerRender(handleArticle);
   ArticlePreview.addHandlerClick(handleArticlePreview);
