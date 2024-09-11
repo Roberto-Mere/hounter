@@ -5,6 +5,14 @@
   font-family: inherit;
   color: inherit;
   background-color: $color-white;
+  position: relative;
+
+  &__error {
+    position: absolute;
+    bottom: -2.4rem;
+    left: 2.4rem;
+    color: $color-danger;
+  }
 
   &--complex {
     display: flex;
