@@ -3,6 +3,8 @@
   grid-template-columns: 2fr 3.5fr;
   gap: 3.2rem;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  animation: fadeIn 0.75s ease-out 1;
 
   &__image {
     width: 100%;
