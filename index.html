@@ -519,8 +519,9 @@
             <span class="text-input message-form__item-name">Name</span>
             <input
               type="text"
-              class="input text-input message-form__item-input"
+              class="input text-input message-form__item-input message-form__input"
               placeholder="Your Name"
+              required
             />
           </label>
 
@@ -528,8 +529,9 @@
             <span class="text-input message-form__item-name">Surname</span>
             <input
               type="text"
-              class="input text-input message-form__item-input"
+              class="input text-input message-form__item-input message-form__input"
               placeholder="Your Surname"
+              required
             />
           </label>
 
@@ -560,7 +562,8 @@
                     type="radio"
                     name="property"
                     value="feature"
-                    class="select__option-input"
+                    class="select__option-input message-form__input"
+                    required
                   />
                   <span class="select__option-text">HTML</span>
                 </label>
@@ -600,10 +603,11 @@
             <span class="text-input message-form__item-name">Message</span>
             <div class="input input--textarea message-form__item-input">
               <textarea
-                class="input--textarea-input text-input"
+                class="input--textarea-input text-input message-form__input"
                 placeholder="Message"
                 rows="6"
                 maxlength="500"
+                required
               ></textarea>
               <span class="label-small text-grey-2">
                 <span class="input--textarea-count">0</span><span>/500</span>
@@ -612,7 +616,11 @@
           </label>
 
           <div class="message-form__item message-form__item--checkbox">
-            <input type="checkbox" class="input input--checkbox" />
+            <input
+              type="checkbox"
+              class="input input--checkbox message-form__item-input message-form__input"
+              required
+            />
             <span class="label-regular text-grey-3"
               >I give consent to the processing of my personal data given in the
               contact form above under the terms and conditions of Grid Dynamics
