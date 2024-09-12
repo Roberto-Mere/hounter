@@ -1,4 +1,5 @@
 import Component from './Component';
+import Review from './Review';
 import { createContainerElement } from './elements';
 
 class Dot extends Component {
@@ -39,6 +40,7 @@ class Dot extends Component {
       if (!dot) return;
 
       goToSlide(dot.dataset.slide);
+      Review.resetTimerSlider();
     });
 
     goToSlide(0);
