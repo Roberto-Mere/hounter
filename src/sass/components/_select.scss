@@ -7,6 +7,7 @@
   border: none;
   border-radius: 10rem;
   cursor: pointer;
+  transition: all 0.25s ease;
 
   &__option-main {
     position: relative;
@@ -50,6 +51,16 @@
       &-input:checked + .select__option-text {
         background-color: $color-primary;
       }
+    }
+
+    &:hover {
+      transform: translateY(-2px);
+      box-shadow: $shadow-btn;
+    }
+
+    &:active {
+      transform: translateY(0);
+      box-shadow: none;
     }
   }
 

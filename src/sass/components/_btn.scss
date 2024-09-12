@@ -7,6 +7,7 @@
   font-weight: 600;
   cursor: pointer;
   width: max-content;
+  transition: all 0.25s ease;
 
   // Modifiers
 
@@ -59,5 +60,15 @@
       background-color: $color-primary;
       border: 1px solid $color-primary;
     }
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-btn;
+  }
+
+  &:active {
+    transform: translateY(0);
+    box-shadow: none;
   }
 }

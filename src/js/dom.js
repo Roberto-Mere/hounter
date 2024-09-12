@@ -142,6 +142,7 @@ export function addEventCookie() {
   const cookieClose = document.querySelector('.cookie__close');
 
   cookieClose.addEventListener('click', () => {
+    cookieBanner.style.opacity = '0';
     cookieBanner.style.visibility = 'hidden';
   });
 }

@@ -4,6 +4,7 @@
   background-color: $color-grey-1;
   border-radius: 50%;
   cursor: pointer;
+  transition: all 0.25s ease;
 
   &--active {
     background-color: $color-grey-3;
