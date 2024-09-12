@@ -88,6 +88,7 @@ function init() {
   dom.addEventCloseModal();
   dom.addEventFormSelect();
   dom.addEventFormTextArea();
+  dom.addEventEnableFormButton();
   dom.addEventCookie();
   HeroFeature.addHandlerRender(handleHeroFeatures);
   HouseFeature.addHandlerRender(handleHouseFeatures);
