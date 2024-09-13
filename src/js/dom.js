@@ -69,7 +69,7 @@ export function addEventArrows() {
   btnRight.addEventListener('click', () => {
     const slide = btnRight.dataset.slide;
 
-    if (slide > houseFeatures.childElementCount - 1) return;
+    if (slide > houseFeatures.childElementCount - 3) return;
 
     btnRight.dataset.slide = +slide + 1;
     btnLeft.dataset.slide = +btnLeft.dataset.slide + 1;
@@ -80,6 +80,7 @@ export function addEventArrows() {
 
 export function addEventOpenModal() {
   const subscribeButton = document.querySelector('.subscribe__btn');
+  const formButton = document.querySelector('.message-form__btn');
   const modalOverlay = document.querySelector('.modal__overlay');
 
   subscribeButton.addEventListener('click', () => {
@@ -97,6 +98,11 @@ export function addEventOpenModal() {
     error.textContent = '';
     email.value = '';
 
+    modalOverlay.style.visibility = 'visible';
+  });
+
+  formButton.addEventListener('click', (e) => {
+    e.preventDefault();
     modalOverlay.style.visibility = 'visible';
   });
 }
@@ -134,6 +140,23 @@ export function addEventFormTextArea() {
 
   formTextArea.addEventListener('input', () => {
     formTextAreaCount.textContent = formTextArea.value.length;
+  });
+}
+
+export function addEventEnableFormButton() {
+  const form = document.querySelector('.message-form');
+  const inputs = document.querySelectorAll('.message-form__input');
+  const formButton = document.querySelector('.message-form__btn');
+
+  form.addEventListener('change', () => {
+    if (
+      Array.from(inputs).every((input) => {
+        return input.validity.valid;
+      })
+    ) {
+      formButton.classList.remove('btn--disabled');
+      formButton.removeAttribute('disabled');
+    }
   });
 }
 

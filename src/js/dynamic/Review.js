@@ -9,6 +9,23 @@ import {
 class Review extends Component {
   _parentContainer = document.querySelector('.reviews__house-reviews');
 
+  _interval;
+
+  _intervalFunction() {
+    const dots = document.querySelector('.reviews__dots');
+    const currSlide = +document.querySelector('.dot--active').dataset.slide;
+    let nextSlide;
+
+    if (currSlide === dots.childElementCount - 1) {
+      nextSlide = 0;
+    } else {
+      nextSlide = currSlide + 1;
+    }
+
+    const nextDot = document.querySelector(`.dot[data-slide="${nextSlide}"]`);
+    nextDot.click();
+  }
+
   _createElement({ image, title, description, partner, rating }) {
     const reviewImage = createImageElement('review__image', image);
 
@@ -49,20 +66,12 @@ class Review extends Component {
   }
 
   addTimerSlider() {
-    setInterval(() => {
-      const dots = document.querySelector('.reviews__dots');
-      const currSlide = +document.querySelector('.dot--active').dataset.slide;
-      let nextSlide;
+    this._interval = setInterval(this._intervalFunction, 12500);
+  }
 
-      if (currSlide === dots.childElementCount - 1) {
-        nextSlide = 0;
-      } else {
-        nextSlide = currSlide + 1;
-      }
-
-      const nextDot = document.querySelector(`.dot[data-slide="${nextSlide}"]`);
-      nextDot.click();
-    }, 12500);
+  resetTimerSlider() {
+    clearInterval(this._interval);
+    this._interval = setInterval(this._intervalFunction, 12500);
   }
 }
 

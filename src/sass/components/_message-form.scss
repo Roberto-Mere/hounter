@@ -19,12 +19,16 @@
       flex: 0 1 75%;
     }
 
-    &:last-child {
+    &--checkbox {
       display: grid;
       grid-template-columns: 2.4rem 1fr;
       justify-self: end;
       width: 75%;
       gap: 0.8rem;
     }
+  }
+
+  &__btn {
+    justify-self: end;
   }
 }
